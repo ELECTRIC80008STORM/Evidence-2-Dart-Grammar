@@ -16,7 +16,7 @@ To simplify the implementation, I'm utilizing a subset of the Dart programming l
 - **Parameters** -> Parameters, Parameters | Identifier
 - **Body** -> {} | {content} | {ReturnStatement} | {content ReturnStatement}
 - **ReturnStatement** -> return value
-- **DataType** -> int | double | String | bool
+- **DataType** -> int | double | String | bool | void
 
 ### Eliminating Ambiguity and Left Recursion
 
@@ -40,18 +40,35 @@ Simplifying further, we refine it to:
 
 #### Resolving Left Recursion:
 
-The `Parameters` rule still exhibits left recursion, which we need to eliminate to prevent parsing issues. By redefining the production to use right recursion through an intermediate state **P'**, we can convert the recursion to this:
-- **Parameters** -> Identifier P'
-- **P'** -> , Identifier P' | ε
+The `Parameters` rule still exhibits left recursion, which we need to eliminate to prevent parsing issues. By redefining the production to use right recursion through an intermediate state **P**, we can convert the recursion to this:
+- **Parameters** -> Identifier P
+- **P** -> , Identifier P | ε
+
+Now that we know how to resolve both problems for the `Parameters` production, we can apply the same process to `F` and `Body` productions, the only places where ambiguity or left recursion is left. The result productions would look as follows:
+
+#### Ambiguity in F:
+- **F** -> Identifier (ParametersList) Body
+- **ParametersList** -> Parameters |  ε
+
+#### Ambiguity in Body:
+- **Body** -> {BodyContent}
+- **BodyContent** -> ε | content | ReturnStatement | content ReturnStatement
+
+#### Resolving Left Recursion in Body:
+- **Body** -> {BodyContent}
+- **BodyContent** -> ε | content B’ | ReturnStatement
+- **B'** -> ReturnStatement | ε
 
 #### Final Grammar:
-
 With these modifications, our grammar is now free from both ambiguity and left recursion:
-
-- **F** -> Identifier (Parameters) Body | Identifier () Body
+- **F** -> Identifier ( ParametersList ) Body
 - **Identifier** -> DataType name | name
-- **Parameters** -> Identifier P'
-- **P'** -> , Identifier P' | ε
-- **Body** -> {} | {content} | {ReturnStatement} | {content ReturnStatement}
+- **ParametersList** -> Parameters | ε
+- **Parameters** -> Identifier P
+- **P** -> , Identifier P | ε
+- **Body** -> { BodyContent }
+- **BodyContent** -> ε | content B | ReturnStatement
+- **B** -> ReturnStatement | ε
 - **ReturnStatement** -> return value
 - **DataType** -> int | double | String | bool
+
