@@ -64,7 +64,7 @@ invalidTests = [
     "name { content return value }",
     "int name ( int name ) { int name ( String char ) { } }",
     "name ( int name ) { return }{}",
-    "int name ( int name ) content return value ",
+    "int name ( int name ) content return value",
     "double name ( String name , int name )",
 ]
 
