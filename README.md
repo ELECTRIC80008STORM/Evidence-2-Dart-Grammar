@@ -81,4 +81,4 @@ This module is used for making it easy to define the Context-Free Grammar (CFG) 
   ```bash
   $ sudo apt install python3-nltk
   ```
-  - Here is a guide to install it on other operating systems: [Guide](https://www.nltk.org/install.html)
+- Here is a guide to install it on other operating systems: [Guide](https://www.nltk.org/install.html)
