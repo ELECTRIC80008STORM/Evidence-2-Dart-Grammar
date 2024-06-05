@@ -16,7 +16,7 @@ To simplify the implementation, I'm utilizing a subset of the Dart programming l
 - **Parameters** -> Parameters, Parameters | Identifier
 - **Body** -> {} | {content} | {ReturnStatement} | {content ReturnStatement}
 - **ReturnStatement** -> return value
-- **DataType** -> int | double | String | bool | void
+- **DataType** -> int | double | String | bool
 
 ### Eliminating Ambiguity and Left Recursion
 
@@ -54,4 +54,4 @@ With these modifications, our grammar is now free from both ambiguity and left r
 - **P'** -> , Identifier P' | ε
 - **Body** -> {} | {content} | {ReturnStatement} | {content ReturnStatement}
 - **ReturnStatement** -> return value
-- **DataType** -> int | double | String | bool | void
+- **DataType** -> int | double | String | bool
