@@ -72,3 +72,13 @@ With these modifications, our grammar is now free from both ambiguity and left r
 - **ReturnStatement** -> return value
 - **DataType** -> int | double | String | bool
 
+## Implementation
+
+The implementation involves utilizing the grammar to check the given strings against it, with this we effectively determine if they could form part of the language. The implementation can be found in the `dartCFGTester.py` file. Given that it’s easy to make mistakes when giving input to the function, the user will only be able to run the code and see the tests and their results for the example strings. Those same tests will be commented in here with their respective LL1 parsing AST. For the implementation to work, the NLTK module is needed.
+
+This module is used for making it easy to define the Context-Free Grammar (CFG) and for creating the parser and using it:
+- It can be installed on Ubuntu with the following command:
+  ```bash
+  $ sudo apt install python3-nltk
+  ```
+  - Here is a guide to install it on other operating systems: [Guide](https://www.nltk.org/install.html)
