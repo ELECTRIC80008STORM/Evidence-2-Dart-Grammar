@@ -186,3 +186,28 @@ Our grammar is specifically a context-free grammar and not part of other levels 
 - **Not Recursively Enumerable (Type 0)**: Although Type 0 grammars can describe any computable language, they offer more power than needed for our parsing requirements.
 
 In conclusion, our grammar fits the criteria of a context-free grammar (Type 2) because it efficiently handles nested structures and recursive patterns without needing the additional complexity of context-sensitive or recursively enumerable grammars.
+
+## References
+1. Dart. (n.d.). *Functions*. Retrieved June 4, 2024, from https://dart.dev/language/functions 
+
+2. Stack Exchange. (2017, December 20). *How can I install NLTK for Python 3?* Ask Ubuntu. Retrieved June 4, 2024, from https://askubuntu.com/questions/996185/how-can-i-install-nltk-for-python-3 
+
+3. Bird, S., Klein, E., & Loper, E. (n.d.). *Installation*. Natural Language Toolkit. Retrieved from https://www.nltk.org/install.html 
+
+4. Bird, S., Klein, E., & Loper, E. (n.d.). *nltk.grammar module*. Natural Language Toolkit. Retrieved from https://www.nltk.org/api/nltk.grammar.html 
+
+5. Bird, S., Klein, E., & Loper, E. (n.d.). *Parsing*. Natural Language Toolkit. Retrieved from https://www.nltk.org/howto/parse 
+
+6. Bird, S., Klein, E., & Loper, E. (n.d.). *nltk.parse.recursivedescent module*. Natural Language Toolkit. Retrieved from https://www.nltk.org/api/nltk.parse.recursivedescent.html 
+
+7. Bird, S., Klein, E., & Loper, E. (2013, June 21). *Recursive Descent Parser*. Natural Language Toolkit. Retrieved from https://github.com/nltk/nltk/blob/8c233dc585b91c7a0c58f96a9d99244a379740d5/nltk/parse/recursivedescent.py#L19 
+
+8. GeeksforGeeks. (2021, April 5). *Chomsky Hierarchy in Theory of Computation*. Retrieved June 4, 2024, from https://www.geeksforgeeks.org/chomsky-hierarchy-in-theory-of-computation/ 
+
+9. Bird, S., Klein, E., & Loper, E. (n.d.). *nltk.parse.earleychart module*. Natural Language Toolkit. Retrieved from https://www.nltk.org/api/nltk.parse.earleychart.html 
+
+10. Scaler. (n.d.). *Earley Algorithm*. Retrieved June 4, 2024, from https://www.scaler.com/topics/nlp/earley-algorithm/ 
+
+11. Polat S., Selcuk-Simsek M. and Cicekli I. (2016). *A Modified Earley Parser for Huge Natural Language Grammars*. Research in Computing Science, 117, 141-150. Retrieved June 4, 2024, from https://rcs.cic.ipn.mx/2016_117/A%20Modified%20Earley%20Parser%20for%20Huge%20Natural%20Language%20Grammars.pdf 
+
+12. Kincaid Z. and Zhu S. (n.d.). *LL(1) Parsing*. Retrieved from https://www.cs.princeton.edu/courses/archive/spring20/cos320/LL1/ 
