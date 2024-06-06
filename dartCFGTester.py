@@ -8,7 +8,7 @@ of Dart function declarations.
 """
 
 from nltk import CFG
-from nltk.parse import RecursiveDescentParser
+from nltk.parse import ChartParser
 import time
 
 # Define the grammar for Dart function declarations
@@ -27,7 +27,7 @@ grammar = CFG.fromstring("""
 """)
 
 # Initialize the parser with the defined grammar.
-parser = RecursiveDescentParser(grammar)
+parser = ChartParser(grammar)
 
 def isSyntacticallyCorrect(testedString):
     """
