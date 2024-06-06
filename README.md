@@ -72,6 +72,11 @@ With these modifications, our grammar is now free from both ambiguity and left r
 - **ReturnStatement** -> return value
 - **DataType** -> int | double | String | bool
 
+### Abstract Syntax Tree
+![Example Parse Tree](ExampleTreeGrammar.png)
+
+This is an example of the tree structure that our grammar can generate. It visually represents the hierarchical relationships between different elements in our grammar, making it easier to understand the scope and nesting of each component. By ensuring our grammar is unambiguous and free from left recursion, we guarantee that there is only one unique Abstract Syntax Tree (AST) for any given input. This clarity simplifies the process of understanding and analyzing the code and the grammar we just made above.
+
 
 ## Implementation
 
